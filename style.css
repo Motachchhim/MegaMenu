@@ -1,0 +1,98 @@
+.menu {
+  position: relative;
+  min-height: 54px;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu ul li {
+  float: left;
+  margin-right: 5px;
+  position: relative;
+}
+.menu ul li a {
+  font-size: 14px;
+  color: #fff;
+  background: #000;
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+.menu ul li:hover > a {
+  background: red;
+}
+/* submenu */
+.menu ul li ul.submenu {
+  width: 260px;
+  background: #000;
+  position: absolute;
+  top: 110%;
+  transition: 0.3s;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu ul li ul.submenu li {
+  float: none;
+  margin: 0;
+  border-bottom: 2px solid#fff;
+}
+.menu ul li:hover ul.submenu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+/* THREE LEVEL MENU */
+.menu ul li ul.submenu li ul.submenu {
+  left: 100%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+}
+.menu ul li ul.submenu li:hover > ul.submenu {
+  opacity: 1;
+  visibility: visible;
+}
+/* Mega menu */
+.menu ul li .megamenu {
+  width: 700px;
+  position: absolute;
+  left: 0;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  top: 110%;
+}
+.menu ul li:hover .megamenu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
+.menu ul li .megamenu ul {
+  width: 25%;
+  float: left;
+}
+.menu ul li .megamenu ul li {
+  display: block;
+  float: none;
+}
+
+.mega-title {
+  font-weight: 700;
+}
+
+/* FULL WIDTH MEGA MENU */
+.menu ul li.static {
+  position: static;
+}
+.menu ul li .megamenu.full-width {
+  width: 100%;
+  left: 0;
+  top: 100%;
+}
+.menu ul li.megamenu.full-width ul {
+  width: 25%;
+}
